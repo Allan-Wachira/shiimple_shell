@@ -1,7 +1,7 @@
 #include "shell.h"
 
-/**
- * _myhistory - shows the history listt,
+**
+ * _myhistory - shows the history list,
  *     presenting each command on a separate line with line numbers,
  *     beginning from 0
  * @info:  Structure holding possible arguments,
@@ -13,7 +13,6 @@ int _myhistory(info_t *info)
 	print_list(info->history);
 	return (0);
 }
-
 
 /**
  * unset_alias -  removes an alias association
