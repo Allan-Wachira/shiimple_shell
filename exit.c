@@ -57,7 +57,7 @@ char *_strncat(char *dest, char *src, int n)
 	return (s);
 }
 
-//**
+/**
  **_strchr - finds a character's position within a string
  *@s: the string to be analyzed
  *@c: the character to search for

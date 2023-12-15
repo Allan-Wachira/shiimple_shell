@@ -63,11 +63,13 @@ ssize_t get_input(info_t *info)
 		return (-1);
 	if (len)	/* There are remaining commands in the chain buffer. */
 	{
-		j = i; /* Initialize a new iterator starting from the current position in the buffer. */
+		j = i;
+		/* Initialize a new iterator starting from current position in the buffer. */
 		p = buf + i; /* Obtain the pointer for returning. */
 
 		check_chain(info, buf, &j, i, len);
-		while (j < len) /* Move through until reaching a semicolon or the conclusion. */
+		while (j < len)
+			/* Move through until reaching a semicolon or the conclusion. */
 		{
 			if (is_chain(info, buf, &j))
 				break;
@@ -77,7 +79,8 @@ ssize_t get_input(info_t *info)
 		i = j + 1; /* Advance beyond the terminated ';' character. */
 		if (i >= len) /* Has the buffer's end been reached? */
 		{
-			i = len = 0; /*  sets the position and length back to their default values */
+			i = len = 0;
+			/*  sets the position and length back to their default values */
 			info->cmd_buf_type = CMD_NORM;
 		}
 
@@ -85,7 +88,8 @@ ssize_t get_input(info_t *info)
 		return (_strlen(p)); /* provides the size of the current command */
 	}
 
-	*buf_p = buf; /* If it's not a chain, then return the buffer obtained from _getline(). */
+	*buf_p = buf;
+	/* If it's not a chain, then return the buffer obtained from _getline(). */
 	return (r); /* returns the size of the buffer obtained from _getline() */
 }
 

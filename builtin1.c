@@ -1,6 +1,6 @@
 #include "shell.h"
 
-**
+/**
  * _myhistory - shows the history list,
  *     presenting each command on a separate line with line numbers,
  *     beginning from 0
@@ -58,7 +58,6 @@ int set_alias(info_t *info, char *str)
 	return (add_node_end(&(info->alias), str, 0) == NULL);
 }
 
-/
 /**
  * print_alias -  displays an alias string
  * @node: the node representing an alias

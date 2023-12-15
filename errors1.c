@@ -87,7 +87,7 @@ int print_d(int input, int fd)
 	return (count);
 }
 
-//**
+/**
  * convert_number - conversion function, similar to itoa
  * @num: numerical value
  * @base: numerical base.

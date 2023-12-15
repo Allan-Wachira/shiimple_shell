@@ -68,7 +68,7 @@ void _puts(char *str)
  * _putchar - print function
  * @c: input character
  *
- * Return: 1 for success, -1 for error, 
+ * Return: 1 for success, -1 for error,
  * setting errno appropriately.
  */
 int _putchar(char c)
